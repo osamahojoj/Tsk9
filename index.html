@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: sans-serif;
+            background-color: rgb(9, 11, 26);
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .major{
+            display: flex;
+            background-color: hsl(244, 37%, 16%);
+            border-radius: 10px;
+            overflow: hidden;
+            max-width: 1000px;
+            width: 100%;
+            flex-wrap: wrap;
+        }
+
+        .d1{
+            padding: 40px;
+            flex: 1 1 400px;
+        }
+
+        h2{
+            color: white;
+            margin: 0;
+        }
+
+        p{
+            color: hsla(0, 0%, 100%, 0.75);
+        }
+
+        span{
+            color: hsl(277, 64%, 61%);
+        }
+
+        #stats{
+            display: flex;
+            gap: 40px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+        }
+
+        .stat-item h3{
+            color: white;
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .stat-item p{
+            margin: 0;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+
+        .d2{
+            position: relative;
+            flex: 1 1 400px;
+        }
+
+        .d2 img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            filter: brightness(60%);
+        }
+
+        .d2::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: hsla(277, 64%, 61%, 0.5);
+        }
+
+        @media(max-width: 768px){
+            .major{
+                flex-direction: column-reverse;
+            }
+
+            .d1{
+                text-align: center;
+            }
+
+            #stats{
+                justify-content: center;
+            }
+
+            .stat-item{
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="major">
+        <div class="d1">
+            <h2>Get <span>insights</span> that help <br>your business grow.</h2>
+
+            <p>
+                Discover the benefits of data analytics and make <br>
+                better decisions regarding revenue, customer <br>
+                experience, and overall efficiency.
+            </p>
+
+            <div id="stats">
+                <div class="stat-item">
+                    <h3>10k+</h3>
+                    <p>COMPANIES</p>
+                </div>
+
+                <div class="stat-item">
+                    <h3>314</h3>
+                    <p>TEMPLATES</p>
+                </div>
+
+                <div class="stat-item">
+                    <h3>12M+</h3>
+                    <p>QUERIES</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="d2">
+            <img src="image-header-desktop.jpg" alt="">
+        </div>
+    </div>
+</body>
+</html>
